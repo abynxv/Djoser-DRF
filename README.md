@@ -1,6 +1,7 @@
 # Simple Djoser Project with DRF and Token Authentication
 This project is a basic implementation of user authentication using Django, Django REST Framework (DRF), and Djoser. 
-It allows users to register, log in, and manage their accounts via token-based authentication.
+Using the Djoser library for Django, the provided URL patterns will set up a variety of endpoints for handling authentication-related tasks. 
+The djoser.urls and djoser.urls.authtoken modules include many endpoints for managing users and authentication tokens.
 
 Setup Instructions
 
@@ -94,5 +95,13 @@ Djoser Endpoints
 
     Endpoint  : http://localhost:8000/auth/token/logout/
     Method    : POST     - Logout
+    Headers   - Key   :  Authorization
+                Value :  Token your_generated_token
+
+10.Current User
+
+    Method    : GET   /auth/users/me/ - Get the current authenticated user's information.
+                PUT   /auth/users/me/ - Update the current authenticated user's information.
+                PATCH /auth/users/me/ - Partially update the current authenticated user's information.
     Headers   - Key   :  Authorization
                 Value :  Token your_generated_token
